@@ -2,15 +2,16 @@
 
 import argparse
 
+#modified for vaapukkamehu /oja89
 leetDict = {
-  'c': ['c', '(', 'k', 'K'],
-  'f': ['f', 'ph', 'pH', 'Ph', 'PH'],
-  'i': ['i', 'l', '!', '1'],
-  'k': ['k', '(', 'c', 'C'],
-  'l': ['l', '1', '!', 'i'],
-  'u': ['u', 'v', 'V'],
-  'v': ['v', 'u', 'U'],
-  'w': ['w', 'vv', 'VV']
+  'v': ['V'],
+  'a': ['A', '4'],
+  'p': ['P'],
+  'k': ['k'],
+  'm': ['M'],
+  'e': ['E', '3'],
+  'h': ['H'],
+  'u': ['U']
 }
 
 def permute(dictWord):
@@ -41,11 +42,12 @@ bplf.close()
 
 pplf = open(args.output_file, "w")
 
-print 'Working...'
+#add bracks /oja89
+print ('Working...')
 
 for profaneWord in profaneWords:
   pplf.writelines([p + '\n' for p in permute(profaneWord)])
 
 pplf.close()
-
-print 'Done.'
+#add bracks /oja89
+print ('Done.')
